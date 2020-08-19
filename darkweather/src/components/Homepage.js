@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import './Homepage.css';
 import LineChartDemo from './LineChartDemo';
+import NOAA_API_DATA from './NOAA-API-Data';
 
 const center = {
     margin: 'auto',
@@ -15,7 +16,7 @@ class Homepage extends Component {
                     <div className="container">
                         <div className="row">
                         <div style={center}>
-                            <LineChartDemo  />   
+                            <NOAA_API_DATA />
                             </div>
                         
 
