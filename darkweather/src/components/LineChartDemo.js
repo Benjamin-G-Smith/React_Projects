@@ -31,6 +31,26 @@ class LineChartDemo extends Component {
 
             },
             options: {
+                bezierCurve: true,
+                steppedLine: false,
+                elements: {
+                    line: {
+                        tension: 0,
+                    },
+                },
+
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            drawOnChartArea: false
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            drawOnChartArea: false
+                        }
+                    }]
+                }
 
             }
         });
