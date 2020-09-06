@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Chart from "chart.js";
 import classes from "./LineChartDemo.module.css";
 
+
 class LineChartDemo extends Component {
 
     constructor(props) {
@@ -13,9 +14,7 @@ class LineChartDemo extends Component {
         };
     }
 
-   
     chartRef = React.createRef();
-
     componentDidMount() {
         const myChartRef = this.chartRef.current.getContext("2d");
         new Chart(myChartRef, {
@@ -26,29 +25,22 @@ class LineChartDemo extends Component {
                     {
                         label: "Water Level",
                         data: this.state.data,
+                        borderColor: '#4287f5',
+                        backgroundColor: '#AAD9FC',
+                        steppedLine: false,
+                        bezierCurve: true,
+                        pointRadius: '0',
+
                     }
                 ]
-
             },
             options: {
-                bezierCurve: true,
-                steppedLine: false,
-                elements: {
-                    line: {
-                        tension: 0,
-                    },
-                },
-
-                scales: {
-                    xAxes: [{
-                        gridLines: {
-                            drawOnChartArea: false
+                scales:{
+                    xAxes:[{
+                        ticks: {
+                            min: 100
                         }
-                    }],
-                    yAxes: [{
-                        gridLines: {
-                            drawOnChartArea: false
-                        }
+                        
                     }]
                 }
 
@@ -57,13 +49,12 @@ class LineChartDemo extends Component {
 
     }
     render() {        
-        
         return (
             <div className={classes.graphContainer}>
                 <canvas
+                    className={classes.canvas_style}
                     id="myChart"
-                    ref={this.chartRef}
-                    
+                    ref={this.chartRef}                    
                 />
             </div>
         )

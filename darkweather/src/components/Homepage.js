@@ -5,7 +5,9 @@ import NOAA_API_DATA from './NOAA-API-Data';
 
 const center = {
     margin: 'auto',
-    padding: '10px'
+    padding: '10px',
+    minHeight: '300px',
+    minWidth: '20%',
 };
 
 class Homepage extends Component {
@@ -15,11 +17,9 @@ class Homepage extends Component {
                     <h1 >Demo of Chart js</h1>       
                     <div className="container">
                         <div className="row">
-                        <div style={center}>
-                            <NOAA_API_DATA />
-                            </div>
-                        
-
+                            <div style={center}>
+                                <NOAA_API_DATA />
+                            </div> 
                         </div>
 
                     </div>
