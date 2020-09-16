@@ -32,6 +32,24 @@ class NOAA_API_DATA extends Component {
             this.setState({items: 'API Failed'})
         })
     }
+    findMins(data){
+        var mins = []
+        for(var i = 1; i < data.length-1; i++){
+            if(data[i] < data[i-1] && data[i] < data[i+1]){
+                mins.push(data[i]);
+            }
+        }
+        return mins;
+    }
+    findMaxes(data) {
+        var maxes = []
+        for (var i = 1; i < data.length - 1; i++) {
+            if (data[i] > data[i - 1] && data[i] > data[i + 1]) {
+                maxes.push(data[i]);
+            }
+        }
+        return maxes;
+    }
 
     render(){
         const { error, isLoaded, items } = this.state;
@@ -40,9 +58,14 @@ class NOAA_API_DATA extends Component {
         } else if (!isLoaded) {
             return <div>Loading...</div>;
         } else {
-            var data = items.map(item => parseInt(item.v,10));
+            var data = items.map(item => parseFloat(item.v));
             var label = items.map(item => item.t);
+            var mins = this.findMins(data);
+            var maxes = this.findMaxes(data);
+
             console.log(data);
+            console.log(mins);
+            console.log(maxes);
             
             return (               
                 <div>                    

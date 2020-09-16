@@ -26,7 +26,8 @@ class LineChartDemo extends Component {
                         label: "Water Level",
                         data: this.state.data,
                         borderColor: '#4287f5',
-                        backgroundColor: '#AAD9FC',
+                        borderWidth: 5,
+                        backgroundColor: '#9cc7f3d1',
                         steppedLine: false,
                         bezierCurve: true,
                         pointRadius: '0',
@@ -45,25 +46,34 @@ class LineChartDemo extends Component {
                         ticks: {
                             fontColor: "white",
                             fontSize: 18,
-
-                            //stepSize: 1,
                             beginAtZero: true
                         },
                         gridLines: {
                             color: "rgba(0, 0, 0, 0)",
-                        }   
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Height ( ft )',
+                            fontColor: "white",
+                            fontSize: 18
+                        }
                     }],
                     xAxes:[{
                         ticks: {
-                            fontColor: "white",
+                            fontColor: "rgba(0, 0, 0, 0)",
                             fontSize: 14,
                             stepSize: 10,
                             beginAtZero: true
                         },
                         gridLines: {
                             color: "rgba(0, 0, 0, 0)",
-                        }   
-                        
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Time ( min )',
+                            fontColor: "white",
+                            fontSize: 18
+                        }                    
                     }]
                 }
 
