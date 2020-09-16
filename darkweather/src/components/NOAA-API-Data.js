@@ -40,9 +40,10 @@ class NOAA_API_DATA extends Component {
         } else if (!isLoaded) {
             return <div>Loading...</div>;
         } else {
-            var data = items.map(item => parseInt( item.v,10));
+            var data = items.map(item => parseInt(item.v,10));
             var label = items.map(item => item.t);
             console.log(data);
+            
             return (               
                 <div>                    
                     <LineChartDemo style = {chart_style}

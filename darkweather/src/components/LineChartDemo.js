@@ -30,16 +30,39 @@ class LineChartDemo extends Component {
                         steppedLine: false,
                         bezierCurve: true,
                         pointRadius: '0',
-
                     }
                 ]
             },
             options: {
+                legend: {
+                    labels: {
+                        fontColor: "white",
+                        fontSize: 18
+                    }
+                },
                 scales:{
+                    yAxes: [{
+                        ticks: {
+                            fontColor: "white",
+                            fontSize: 18,
+
+                            //stepSize: 1,
+                            beginAtZero: true
+                        },
+                        gridLines: {
+                            color: "rgba(0, 0, 0, 0)",
+                        }   
+                    }],
                     xAxes:[{
                         ticks: {
-                            min: 100
-                        }
+                            fontColor: "white",
+                            fontSize: 14,
+                            stepSize: 10,
+                            beginAtZero: true
+                        },
+                        gridLines: {
+                            color: "rgba(0, 0, 0, 0)",
+                        }   
                         
                     }]
                 }
