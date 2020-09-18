@@ -13,14 +13,15 @@ const center = {
 class Homepage extends Component {
     render(){
         return (
-            <div className="Home-Page bg-dark text-light">
-                    <h1 >Demo of Chart js</h1>       
+            <div className="Home-Page bg-dark text-light">                          
                     <div className="container">
                         <div className="row">
                             <div style={center}>
                                 <NOAA_API_DATA />
                             </div> 
                         </div>
+                    <h1 >Demo of Chart js</h1>
+
 
                     </div>
                           

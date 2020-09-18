@@ -9,6 +9,10 @@
   height: 40vmin;
   pointer-events: none;
 }
+.Spacer {
+  height: 10px;
+  margin: 10px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
