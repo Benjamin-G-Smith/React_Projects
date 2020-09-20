@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Chart from "chart.js";
 import classes from "./LineChartDemo.module.css";
+import NOAA_API_DATA from './NOAA-API-Data';
 
 
 class LineChartDemo extends Component {
@@ -55,7 +56,7 @@ class LineChartDemo extends Component {
                             display: true,
                             labelString: 'Height ( ft )',
                             fontColor: "white",
-                            fontSize: 18
+                            fontSize: 18    
                         }
                     }],
                     xAxes:[{
@@ -87,7 +88,8 @@ class LineChartDemo extends Component {
                 <canvas
                     className={classes.canvas_style}
                     id="myChart"
-                    ref={this.chartRef}                    
+                    ref={this.chartRef}          
+                                       
                 />
             </div>
         )
