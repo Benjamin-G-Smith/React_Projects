@@ -12,9 +12,15 @@ class Homepage extends Component {
                 <div className="chart-area">
                     <div className="row">
                         <div className="chart-container">
+                        {/* <div class="ocean">
+                <div class="wave"></div>
+                <div class="wave"></div>
+                </div> */}
                              <NOAA_API_DATA />
                         </div> 
                     </div>
+
+
                 </div>                          
             </div>
         );
