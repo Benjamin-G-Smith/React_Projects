@@ -9,7 +9,6 @@ function App() {
   return (
     <div className="App">
       <TopNav/>
-      <div className="Spacer"></div>
       <Homepage/>
     </div>
   );

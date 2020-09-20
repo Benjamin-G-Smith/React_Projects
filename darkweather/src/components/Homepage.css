@@ -1,3 +1,45 @@
 .Home-Page{
-    height: 80vh;
+    height: 85vh;
+    overflow-y: scroll;
+    z-index: 1;
+    position: relative;
+
 }
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.chart-container{
+    margin: auto;
+    padding: 10px;
+    min-height: 300px;    
+    min-width: 20%;
+
+}
+.chart-area{
+    position: relative;
+    z-index: 3;
+    top: 1em;
+    margin: auto;
+    padding: 10px;
+}
+.banner{
+    background-image: url('../img/lighthouse-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+    height: 400px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    opacity: 0.35;
+}
+.title {
+    padding:20px;
+    position: relative;
+    margin: auto;
+    z-index: 4;
+    font-size: 45px;
+    -webkit-font-smoothing: antialiased;
+}
+
+  
