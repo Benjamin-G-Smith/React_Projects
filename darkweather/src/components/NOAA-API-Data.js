@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import LineChartDemo from './LineChartDemo';
-import axios from 'axios';
+import moment from "moment";
 
-const start_date = "20200808";
-// 2020-Year 08-Month  08-Day 
-const end_date = "20200808";
+// YYYY MM DD
+const start_date = "20200809";
+const end_date = "20200809";
 const datum = "MLLW";
 const station = "9447130";
-const apicall = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?begin_date="+start_date+"&end_date="+ end_date +"&station="+ station +"&product=water_level&units=english&time_zone=gmt&application=ports_screen&format=json&datum="+datum;
+const product = "water_level";
 
 const chart_style = {
     minWidth: '20%',
@@ -121,21 +121,33 @@ const chart_style = {
 // export default NOAA_API_DATA;
 
 class NOAA_API_DATA extends Component {
-
-
     constructor(props) {
         super(props);
         this.state = {
             error: null,
             isLoaded: false,
-            items: []
-        };
+            items: [],
+        };      
     }
 
     componentDidMount(){
+
+    const st_date = moment().format("YYYYMMDD");
+    const end_date = moment().format("YYYYMMDD");
+    
+    const apicall = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?begin_date="+st_date+"&end_date="+ end_date +"&station="+ station +"&product="+ product +"&units=english&time_zone=gmt&application=ports_screen&format=json&datum="+datum;
     fetch(apicall)
         .then(res => res.json())
-        .then(result => {console.log(result); this.setState({isLoaded: true, items: result.data});})
+        .then(result => {this.setState({isLoaded: true, items: result.data});})
+        .catch(err => {
+            console.log(err)
+            this.setState({items: 'API Failed'})
+        })
+    const product2 = "wind";
+    const apicall2 = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?begin_date="+st_date+"&end_date="+ end_date +"&station="+ station +"&product="+product2+"&units=english&time_zone=gmt&application=ports_screen&format=json&datum="+datum;
+    fetch(apicall2)
+        .then(res => res.json())
+        .then( result => {console.log(result)})
         .catch(err => {
             console.log(err)
             this.setState({items: 'API Failed'})

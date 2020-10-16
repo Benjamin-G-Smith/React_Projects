@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import Chart from "chart.js";
 import classes from "./LineChartDemo.module.css";
-import NOAA_API_DATA from './NOAA-API-Data';
-
 
 class LineChartDemo extends Component {
 
@@ -80,7 +78,6 @@ class LineChartDemo extends Component {
 
             }
         });
-
     }
     render() {        
         return (
@@ -88,9 +85,13 @@ class LineChartDemo extends Component {
                 <canvas
                     className={classes.canvas_style}
                     id="myChart"
-                    ref={this.chartRef}          
-                                       
-                />
+                    ref={this.chartRef}                                       
+                >                
+                {/* <div class="ocean">
+                <div class="wave"></div>
+                <div class="wave"></div>
+            </div> */}
+                </canvas>
             </div>
         )
     }
