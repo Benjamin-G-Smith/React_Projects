@@ -153,24 +153,24 @@ class NOAA_API_DATA extends Component {
             this.setState({items: 'API Failed'})
         })
     }
-    findMins(data){
-        var mins = []
-        for(var i = 1; i < data.length-1; i++){
-            if(data[i] < data[i-1] && data[i] < data[i+1]){
-                mins.push(data[i]);
-            }
-        }
-        return mins;
-    }
-    findMaxes(data) {
-        var maxes = []
-        for (var i = 1; i < data.length - 1; i++) {
-            if (data[i] > data[i - 1] && data[i] > data[i + 1]) {
-                maxes.push(data[i]);
-            }
-        }
-        return maxes;
-    }
+    // findMins(data){
+    //     var mins = []
+    //     for(var i = 1; i < data.length-1; i++){
+    //         if(data[i] < data[i-1] && data[i] < data[i+1]){
+    //             mins.push(data[i]);
+    //         }
+    //     }
+    //     return mins;
+    // }
+    // findMaxes(data) {
+    //     var maxes = []
+    //     for (var i = 1; i < data.length - 1; i++) {
+    //         if (data[i] > data[i - 1] && data[i] > data[i + 1]) {
+    //             maxes.push(data[i]);
+    //         }
+    //     }
+    //     return maxes;
+    // }
     render(){
         const { error, isLoaded, items } = this.state;
         if (error) {

@@ -1,7 +1,7 @@
 .Home-Page{
     height: 85vh;
     overflow-y: scroll;
-    z-index: 1;
+    /* z-index: 1; */
     position: relative;
 
 }
@@ -16,30 +16,29 @@
 
 }
 .chart-area{
-    position: relative;
-    z-index: 3;
-    top: 1em;
-    margin: auto;
-    padding: 10px;
+  position: relative;
+  top: 7em;
+  margin: auto;
+  padding: 10px;
 }
 .banner{
     background-image: url('../img/lighthouse-3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width:100%;
-    height: 400px;
+    height: 220px;
     position: absolute;
-    z-index: 2;
     top: 0;
     opacity: 0.35;
+    overflow-y: hidden;
 }
 .title {
     padding:20px;
     position: relative;
     margin: auto;
-    z-index: 4;
     font-size: 45px;
     -webkit-font-smoothing: antialiased;
+    z-index: 1;
 }
 
 html, body { height: 100%; }
@@ -55,10 +54,12 @@ body {
   bottom:0;
   left:0;
   background: #015871;
+  z-index: 0;
 }
 
 .wave {
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+  /* background: url(../img/Artboard\ 1CCTS-Logo-11.svg) repeat-x;  */
   position: absolute;
   top: -198px;
   width: 6400px;

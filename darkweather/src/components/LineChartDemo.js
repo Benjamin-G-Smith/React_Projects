@@ -24,9 +24,9 @@ class LineChartDemo extends Component {
                     {
                         label: "Water Level",
                         data: this.state.data,
-                        borderColor: '#4287f5',
+                        borderColor: '#85e5ff',
                         borderWidth: 5,
-                        backgroundColor: '#9cc7f3d1',
+                        backgroundColor: '#6ab3fd29',
                         steppedLine: false,
                         bezierCurve: true,
                         pointRadius: '0',
@@ -87,10 +87,7 @@ class LineChartDemo extends Component {
                     id="myChart"
                     ref={this.chartRef}                                       
                 >                
-                {/* <div class="ocean">
-                <div class="wave"></div>
-                <div class="wave"></div>
-            </div> */}
+                {/*  */}
                 </canvas>
             </div>
         )

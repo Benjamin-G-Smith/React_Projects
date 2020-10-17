@@ -16,9 +16,14 @@ class Homepage extends Component {
     }
     render(){
         return (
-            <div className="Home-Page bg-dark text-light hide-scrollbar">
-                <h1 className="title">{this.state.date}</h1>
-                <div className="banner" id="banner"></div>                          
+            <div className="Home-Page bg-dark text-light hide-scrollbar">    
+                    <h1 className="title">{this.state.date}</h1>       
+                    <div className="banner hide-scrollbar" id="banner">                     
+                        <div className="ocean">
+                            <div className="wave"></div>
+                            <div className="wave"></div>
+                        </div>
+                    </div>      
                 <div className="chart-area">
                     <div className="row">
                         <div className="chart-container">                        
