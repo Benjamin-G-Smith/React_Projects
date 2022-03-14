@@ -5,11 +5,17 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <ColorPicker identity='color_a'></ColorPicker>
-        <ColorPicker identity='color_b'></ColorPicker>
-        <ColorPicker identity='color_c'></ColorPicker>
+      <header className="App-header" >
+        <div className="App-Container">
+          <ColorPicker></ColorPicker>
+          <ColorPicker></ColorPicker>
+          <ColorPicker></ColorPicker>
+          <ColorPicker></ColorPicker>
+          <ColorPicker></ColorPicker>
+        </div>
       </header>
+      
+
     </div>
   );
 }

@@ -1,5 +1,7 @@
 .ColorPicker {
-    height: 300px;
-    width: 250px;
+    height: 100vh;
+    width: 20vw;
     background-color: #ffff;
+    display: inline-block;
+    text-align: center;
 }
