@@ -13,13 +13,16 @@ class ColorPicker extends React.Component {
       hexCode : '#ffff',
     }
   }
-  // componentDidMount(){
-  //   useEffect( () => {
-  //     window.addEventListener("keypress", this.generateNewColor);
-  //   });
-  // }
+
+
   componentDidMount(){
     this.generateNewColor();
+    window.addEventListener('keyup', event => {
+      if(event.code == 'Space'){
+        this.generateNewColor();
+      }
+    })
+
   }
   generateNewColor = () => {
       if(!this.state.isLocked){
